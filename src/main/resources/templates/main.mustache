@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="add">
+            <input type="text" name="name" placeholder="Your name"/>
+            <input type="text" name="email" placeholder="Tag"/>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div>Find users by name:</div>
+    <div>
+        <form method="post" action="filterByName">
+            <input type="text" name="findName" placeholder="User name">
+            <button type="submit">Find</button>
+        </form>
+    </div>
+
+    <div>All users:</div>
+    {{#users}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+        <i>{{email}}</i>
+    </div>
+    {{/users}}
+
+
+</body>
+</html>
